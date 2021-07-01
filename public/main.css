@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins' !important;
+}
+
+.container {
+    margin-top: 8rem;
+}
+
+.login {
+    background-color: #F0F0F0;
+    width: 20rem;
+    height: 21rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    /* border: 1px solid lightslategray; */
+    border-radius: 5px;
+    box-shadow: 0px 5px 20px rgba(0, 0, 0, 40%);
+}
+
+.login>img {
+    width: 70%;
+    height: auto;
+    padding: 2rem;
+}
+
+.login>input {
+    width: 80%;
+    height: 10%;
+    margin: .2rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+}
+
+.input-login {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: .4rem;
+    height: 2rem;
+}
+
+.input-login>input {
+    width: 80%;
+    height: 100%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.input-login>input:hover {
+    box-shadow: 0px 0px 3px black;
+}
+
+.login>a {
+    text-decoration: none;
+    padding-top: 1rem;
+}
+
+#visible{
+    display: flex  !important;
+}
+.login_empresa{
+    position: relative;
+    bottom: 5px;
+    z-index: 9999;
+}
+.selector-empresa {
+    background-color: #F0F0F0;
+    width: 20rem;
+    height: 9rem;
+    margin: 0 auto;
+    padding-top: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+    box-shadow: 0px 15px 20px rgb(0 0 0 / 26%);
+    justify-content: space-evenly;
+}
+
+@media (max-width: 500px) {
+    .login {
+        width: 90vw;
+        height: 24rem;
+    }
+}

@@ -1,0 +1,36 @@
+{{> header }}
+<div class="container">
+        <form method="POST" action="/signin" class="login">
+            <img src="Institucional/logo-trans.png" alt="logo de megadata">
+            <div class="input-login">
+                <i class="fas fa-user"></i>
+                <input autofocus id="usuario" name="usuario" type="text" placeholder="Usuario" required value={{email}} >
+            </div>
+            <div class="input-login pw">
+                <i class="fas fa-key"></i>
+                <input id="pw-user" name="pw_user" type="password" placeholder="Contraseña" required value={{passw}} >
+            </div>
+            <input class="btn btn-primary" type="submit"  id="btn-login" name="Ingresar">
+            <a href="#">Olvide mi contraseña.</a>
+            {{#if Error }}
+                <strong>{{Error}}!</strong> 
+            {{/if}}
+            </form> 
+              
+            {{#if visible}}
+            <form method="POST" action="/ingreso" class="login_empresa">
+            <div id="visible" class="selector-empresa">
+                <label for="empresas" >Seleccione la empresa:</label>
+                <select id="empresas"name="selectEMpresas">
+                    {{#each empresa}}
+                    <option name={{ID_MUSU}}> {{EMPRESA_MUSU}}</option>
+                    {{/each}}
+                </select>
+                <input class="btn btn-success" type="submit"  id="btn" name="Aceptar">
+            </div>
+            </form>
+            {{/if}}
+       
+    </div>
+   <!-- <script src="main.js"></script>-->
+{{> footer }}
